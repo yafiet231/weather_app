@@ -22,7 +22,10 @@ function fetchWeather() {
 	  document.getElementById("search").value = "";
 const geocodeData = await getLonAndLat();
 getWeatherData(geocodeData.lon, geocodeData.lat);
-
+async function getLonAndLat() {
+  const countryCode = 1;
+  const geocodeURL = `https://api.openweathermap.org/geo/1.0/direct?q=${searchInput.replace(" ", "%20")},${251}&limit=1&appid=${8d0dacd3fff228f765e387d228271877}`;
+}
   }
 }
 const response = await fetch(geocodeURL);
